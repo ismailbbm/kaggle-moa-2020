@@ -2,6 +2,8 @@
 
 Competition description: https://www.kaggle.com/c/lish-moa
 
+Link to my kaggle profile: https://www.kaggle.com/ismailbbm
+
 Summary: based on cellular response to a particular drug, the goal is to predict which mechanisms of action are perturbed in the cells (e.g. "potassium channel activator")
 
 # Notes on the model and kaggle competitions
