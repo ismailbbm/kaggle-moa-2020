@@ -1,0 +1,10 @@
+# local package
+-e .
+
+# external requirements
+torch==1.4.0
+pandas==1.0.1
+numpy==1.19.1
+sklearn==0.21.3
+scipy==1.5.2 
+joblib==0.16.0

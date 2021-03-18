@@ -1,0 +1,65 @@
+paths:
+  path_data: ../data/raw/
+  path_output: ../data/processed/
+  path_model: ../models/
+
+features:
+  #Normalization
+  normalization_type: standard #standard or quantile
+  use_train_test_for_norm: true #A bit of data leakage
+
+  #KDE features
+  add_kernels: true
+  use_log_for_kernel_diff: true
+  inverse_kde: true
+  ratio_inverse_kde: true
+  use_diff_kde: false #When set to true, use_log_for_kernel_diff, inverse_kde, ratio_inverse_kde become irrelevant
+  exclude_c_from_kde: false
+  exclude_g_from_kde: true
+
+  #Dimension reduction
+  g_removal_count: 75
+  perform_pca: false
+  pca_for_c: false
+  pca_for_kde: false
+
+  add_c_stats: false
+
+augmentation:
+  #Oversampling
+  augment_data: false
+  additional: 0 #won't calculate if zero
+  granularity: 100
+  max_dev: 0.1
+  normal_std_dev: 0.1
+
+  #Add control data
+  control_share_in_train: 0
+  add_control_from_test: false
+
+
+model:
+  #Holdout
+  validation_ratio: 0.2
+
+  #Cross validation 
+  folds: 5
+  fold_type: null #Not used anymore
+  oof_type: multi #can be 'kfold' or 'multi'
+  oof_threshold: 18
+
+  n_seeds: 5
+
+  label_smoothing: 0.00025  
+  oof_loss_limit: 0
+  nn_architecture: '1.2'
+
+
+post_processing:
+  model_nonscored: true
+
+
+
+
+
+
