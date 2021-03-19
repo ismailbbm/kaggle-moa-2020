@@ -42,12 +42,12 @@ The model is a dense neural network using pytorch. Neural networks have been per
 ### Using control drugs to better identify MoA
 Splitting the drugs experiments in two groups (control and vehicle) and then plotting the distribution of their impact on cellular response, we can better identify how real drugs differ from control drugs.
 
-![kde.png](https://github.com/ismailbbm/kaggle-moa-2020/images/kde.png)
+![kde.png](https://github.com/ismailbbm/kaggle-moa-2020/blob/master/images/kde.png)
 
 In red is one of the cellular response distribution from a active drug, blue is from control.
 Using this difference, I compute a kernel which will transform the cellular response value into a new value which aims at better identifying cellular responses provoked by a real drug.
 
-![kde_feature.png](https://github.com/ismailbbm/kaggle-moa-2020/images/kde_feature.png)
+![kde_feature.png](https://github.com/ismailbbm/kaggle-moa-2020/blob/master/images/kde_features.png)
 
 This feature engineering improved the out of fold score when the validation fold contained unknown drugs. However, this engineering did not produce any improvement when the validation fold contained already seen drugs.
 
