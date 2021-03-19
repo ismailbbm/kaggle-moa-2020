@@ -16,7 +16,6 @@ from iterstrat.ml_stratifiers import MultilabelStratifiedKFold
 import multiprocessing
 
 from utils import seed_everything
-from model.models import TabularNN, CFG
 
 
 class LabelSmoothingCrossEntropy(nn.Module):

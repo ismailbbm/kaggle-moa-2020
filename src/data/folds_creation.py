@@ -5,7 +5,7 @@ from iterstrat.ml_stratifiers import MultilabelStratifiedKFold
 from utils import seed_everything
 from data.split_drugs import select_split_drugs
 
-def create_cv(self,X,y,drugs,sig_ids,threshold=1000,folds=5,seed=42):
+def create_cv(X,y,drugs,sig_ids,threshold=1000,folds=5,seed=42):
         seed_everything(seed)
 
         y_cols = y.columns.tolist()
@@ -50,7 +50,7 @@ def create_cv(self,X,y,drugs,sig_ids,threshold=1000,folds=5,seed=42):
             oof_idx.append((train,val))
         return oof_idx
     
-def create_cv_kfold(self,X,drugs,sig_ids,folds=5,seed=42):
+def create_cv_kfold(X,drugs,sig_ids,folds=5,seed=42):
     seed_everything(seed)
     
     X = X.copy()

@@ -43,12 +43,12 @@ model:
   validation_ratio: 0.2
 
   #Cross validation 
-  folds: 5
+  folds: 3
   fold_type: null #Not used anymore
   oof_type: multi #can be 'kfold' or 'multi'
   oof_threshold: 18
 
-  n_seeds: 5
+  n_seeds: 1
 
   label_smoothing: 0.00025  
   oof_loss_limit: 0

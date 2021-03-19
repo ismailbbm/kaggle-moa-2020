@@ -5,6 +5,7 @@ import torch
 import yaml
 
 
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def seed_everything(seed=42):
     random.seed(seed)
@@ -109,5 +110,5 @@ def read_yaml_conf(path):
         print('Error reading the config file')
         
 def write_yaml_conf(path,conf):
-    with open([path], "w") as output:
+    with open(path , "w") as output:
         yaml.safe_dump(conf, output, default_flow_style=False)
