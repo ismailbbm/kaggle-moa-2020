@@ -25,6 +25,8 @@ Contains:
 * model : model training and evaluation
 * conf.yaml : configuration for the data preparation and the model
 
+Data used for training the model can be downloaded from ![kaggle](https://www.kaggle.com/c/lish-moa/data) and put in `/data/raw/`
+
 ### Notebooks
 
 * experiment: notebook to run and evaluate experiments
